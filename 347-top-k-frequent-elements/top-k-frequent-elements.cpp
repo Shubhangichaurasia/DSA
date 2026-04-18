@@ -12,10 +12,10 @@ public:
         for(auto it:mp){
             freq.push_back({it.second,it.first});
             //storing as (frequency,value)
-        }
+        
             //sorting in decending order 
             sort(freq.rbegin(),freq.rend());
-        
+        }
             //printing first k elements 
             vector<int>ans;
             for(int i =0 ; i < k;i++){
