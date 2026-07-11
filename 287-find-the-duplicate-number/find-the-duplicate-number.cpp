@@ -6,17 +6,19 @@ public:
 
         //start a fast and slow pointer until they meet
         int slow = 0 , fast = 0 ;
-        do{
+        while(true){  //becz we know that cycle will form for sure
             slow = nums[slow];
             fast = nums[nums[fast]];
-            } while (slow!=fast);
-
-        //as soon as they meet , move both pointers at same speed until they meet again 
+            if(fast == slow ){
+//as soon as they meet , move both pointers at same speed until they meet again 
         slow = 0 ;
         while(slow !=fast){
             slow = nums[slow];
             fast = nums[fast];
         }
         return slow;
+            }
+        }
+        return 0;
     }
 };
