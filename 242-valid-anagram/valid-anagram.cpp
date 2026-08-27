@@ -6,7 +6,9 @@ public:
           else{
         sort(s.begin(),s.end());
         sort(t.begin(),t.end());
-        int i = 0 ;
+        return s==t;
+          }
+        /*int i = 0 ;
         int j = 0 ; 
          while(i<s.length()&&j<t.length()){
             if(s[i]==t[j]){
@@ -18,5 +20,6 @@ public:
          return true;
           }
           return true ;
+          */
     }
 };
