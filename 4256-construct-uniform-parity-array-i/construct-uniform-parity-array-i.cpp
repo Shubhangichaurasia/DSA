@@ -12,6 +12,7 @@ public:
     //         i++;
     //     }
         return true;
+        //it will always return true becz odd-even = odd 7 even - odd =odd too so when we have one or more even or 1 or more odd we can always make everything odd
       
     }
 };
