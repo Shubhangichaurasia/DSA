@@ -1,18 +1,12 @@
 class Solution {
 public:
     vector<int> smallerNumbersThanCurrent(vector<int>& nums) {
-        vector<int>ans;
-        
-        for(int i = 0 ; i <nums.size();i++){
-            int k = 0 ; 
-            for(int j = 0 ; j <nums.size();j++){
-                if(j!=i && nums[j]<nums[i])
-                k++;
-               
-            }
-             ans.push_back(k);
-
+        vector<int>sorted = nums,ans;
+        //this will make a copy of nums vector and ans ->empty vector
+        sort(sorted.begin(),sorted.end());
+        for(int i:nums){
+           ans.push_back(lower_bound(sorted.begin(),sorted.end(),i)-sorted.begin());
         }
-        return ans ;
+        return ans;
     }
 };
